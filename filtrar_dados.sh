@@ -1,6 +1,20 @@
 #!/bin/bash
 
-# cat mysqld.txt | awk '{print $12, $6, $7, $8, $2}' > dados_mysql.txt
-# cat oned.txt | awk '{print $12, $6, $7, $8, $2}' > dados_oned.txt
-cat systemd.txt | awk '{print $12, $6, $7, $8, $2}' > dados_systemd.txt
-# cat teste.txt | awk '{print $12, $6, $7, $8, $2}' > dados_teste.txt
+## OBTER O MENOR TEMPO INICIAL DOS ARQUIVOS
+tempo_inicial=`head -n1 mysqld.txt`
+if [ `head -n1 oned.txt` -lt $tempo_inicial ]; then
+	tempo_inicial=`head -n1 oned.txt`
+fi
+if [ `head -n1 systemd.txt` -lt $tempo_inicial ]; then
+	tempo_inicial=`head -n1 systemd.txt`
+fi
+
+./filtrar_dados_arquivo.sh mysqld $tempo_inicial
+./filtrar_dados_arquivo.sh oned $tempo_inicial
+./filtrar_dados_arquivo.sh systemd $tempo_inicial
+# ./filtrar_dados_arquivo.sh one $tempo_inicial
+
+./gerar_amostragem_dados.sh mysqld # > dados_grafico_mysqld.txt
+./gerar_amostragem_dados.sh oned # > dados_grafico_oned.txt
+./gerar_amostragem_dados.sh systemd # > dados_grafico_systemd.txt
+# ./gerar_amostragem_dados.sh one # > dados_grafico_systemd.txt

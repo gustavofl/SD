@@ -4,42 +4,42 @@ set ylabel 'Memoria (Bytes)'
 
 # # MYSQL
 
-# set output 'imagens/10-43/mem virtual mysql.png'
-# set title 'Memoria virtual mysql'
-# plot 'dados_grafico_mysql.txt' using 1:3 title 'mysql' with lines lw 3 lt 1s
+set output 'imagens/25-01 08-40/mem virtual mysql.png'
+set title 'Memoria virtual mysql'
+plot 'dados_mysqld.txt' using 1:2 title 'mysql' with lines lw 3 lt 1
 
-# set output 'imagens/10-43/mem residente mysql.png'
-# set title 'Memoria residente mysql'
-# plot 'dados_grafico_mysql.txt' using 1:4 title 'mysql' with lines lw 3 lt 1
+set output 'imagens/25-01 08-40/mem residente mysql.png'
+set title 'Memoria residente mysql'
+plot 'dados_mysqld.txt' using 1:3 title 'mysql' with lines lw 3 lt 1
 
-# set output 'imagens/10-43/mem compartilhada mysql.png'
-# set title 'Memoria compartilhada mysql'
-# plot 'dados_grafico_mysql.txt' using 1:5 title 'mysql' with lines lw 3 lt 1
+set output 'imagens/25-01 08-40/mem compartilhada mysql.png'
+set title 'Memoria compartilhada mysql'
+plot 'dados_mysqld.txt' using 1:4 title 'mysql' with lines lw 3 lt 1
 
 # # ONED
 
-# set output 'imagens/10-43/mem virtual oned.png'
-# set title 'Memoria virtual oned'
-# plot 'dados_grafico_oned.txt' using 1:3 title 'oned' with lines lw 3 lt 1
+set output 'imagens/25-01 08-40/mem virtual oned.png'
+set title 'Memoria virtual oned'
+plot 'dados_oned.txt' using 1:2 title 'oned' with lines lw 3 lt 1
 
-# set output 'imagens/10-43/mem residente oned.png'
-# set title 'Memoria residente oned'
-# plot 'dados_grafico_oned.txt' using 1:4 title 'oned' with lines lw 3 lt 1
+set output 'imagens/25-01 08-40/mem residente oned.png'
+set title 'Memoria residente oned'
+plot 'dados_oned.txt' using 1:3 title 'oned' with lines lw 3 lt 1
 
-# set output 'imagens/10-43/mem compartilhada oned.png'
-# set title 'Memoria compartilhada oned'
-# plot 'dados_grafico_oned.txt' using 1:5 title 'oned' with lines lw 3 lt 1
+set output 'imagens/25-01 08-40/mem compartilhada oned.png'
+set title 'Memoria compartilhada oned'
+plot 'dados_oned.txt' using 1:4 title 'oned' with lines lw 3 lt 1
 
 # SYSTEMD
 
-set output 'imagens/10-43/mem virtual systemd.png'
+set output 'imagens/25-01 08-40/mem virtual systemd.png'
 set title 'Memoria virtual systemd'
-plot 'dados_grafico_systemd.txt' using 1:3 title 'systemd' with lines lw 3 lt 1
+plot 'dados_systemd.txt' using 1:2 title 'systemd' with lines lw 3 lt 1
 
-set output 'imagens/10-43/mem residente systemd.png'
+set output 'imagens/25-01 08-40/mem residente systemd.png'
 set title 'Memoria residente systemd'
-plot 'dados_grafico_systemd.txt' using 1:4 title 'systemd' with lines lw 3 lt 1
+plot 'dados_systemd.txt' using 1:3 title 'systemd' with lines lw 3 lt 1
 
-set output 'imagens/10-43/mem compartilhada systemd.png'
+set output 'imagens/25-01 08-40/mem compartilhada systemd.png'
 set title 'Memoria compartilhada systemd'
-plot 'dados_grafico_systemd.txt' using 1:5 title 'systemd' with lines lw 3 lt 1
+plot 'dados_systemd.txt' using 1:4 title 'systemd' with lines lw 3 lt 1
