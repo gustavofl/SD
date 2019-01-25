@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cont=1
-inc=512
+inc=654
 estado="VALOR"
 
 while [ $cont -le 6000 ]
