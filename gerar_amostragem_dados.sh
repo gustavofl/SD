@@ -10,9 +10,11 @@ do
 	amostra=`echo $line | awk '{print $1}'`
 	if [[ $amostra-$ultima_amostra -ge $intervalo_amostragem ]]; then 
 		minutos_amostra=`echo $amostra/60 | bc`
-		dados=`echo $line | awk '{print $2, $3, $4}'`
+		mem_virtual=`echo "scale=3;$(echo $line | awk '{print $2}')/1000" | bc`
+		mem_residente=`echo "scale=3;$(echo $line | awk '{print $3}')/1000" | bc`
+		mem_compartilhada=`echo "scale=3;$(echo $line | awk '{print $4}')/1000" | bc`
 		
-		echo $minutos_amostra $dados >> dados_plot_$1.txt
+		echo $minutos_amostra $mem_virtual $mem_residente $mem_compartilhada >> dados_plot_$1.txt
 
 		ultima_amostra=$amostra
 	fi
