@@ -1,0 +1,58 @@
+set encoding utf8
+set xlabel 'Tempo (minutos)'
+set ylabel 'Memória (MBytes)'
+
+# # MYSQL
+
+# # set output 'imagens/26-01 21-00/mem virtual mysql.png'
+# set title 'Memória virtual mysql'
+# plot 'dados_plot_mysqld.txt' using 1:2 title 'mysql' with lines lw 3 lt 1
+
+# # set output 'imagens/26-01 21-00/mem residente mysql.png'
+# set title 'Memória residente mysql'
+# plot 'dados_plot_mysqld.txt' using 1:3 title 'mysql' with lines lw 3 lt 1
+
+# # set output 'imagens/26-01 21-00/mem compartilhada mysql.png'
+# set title 'Memória compartilhada mysql'
+# plot 'dados_plot_mysqld.txt' using 1:4 title 'mysql' with lines lw 3 lt 1
+
+# # ONED
+
+# # set output 'imagens/26-01 21-00/mem virtual oned.png'
+# set title 'Memória virtual oned'
+# plot 'dados_plot_oned.txt' using 1:2 title 'oned' with lines lw 3 lt 1
+
+# # set output 'imagens/26-01 21-00/mem residente oned.png'
+# set title 'Memória residente oned'
+# plot 'dados_plot_oned.txt' using 1:3 title 'oned' with lines lw 3 lt 1
+
+# # set output 'imagens/26-01 21-00/mem compartilhada oned.png'
+# set title 'Memória compartilhada oned'
+# plot 'dados_plot_oned.txt' using 1:4 title 'oned' with lines lw 3 lt 1
+
+# # SYSTEMD
+
+# # set output 'imagens/26-01 21-00/mem virtual systemd.png'
+# set title 'Memória virtual systemd'
+# plot 'dados_plot_systemd.txt' using 1:2 title 'systemd' with lines lw 3 lt 1
+
+# # set output 'imagens/26-01 21-00/mem residente systemd.png'
+# set title 'Memória residente systemd'
+# plot 'dados_plot_systemd.txt' using 1:3 title 'systemd' with lines lw 3 lt 1
+
+# # set output 'imagens/26-01 21-00/mem compartilhada systemd.png'
+# set title 'Memória compartilhada systemd'
+# plot 'dados_plot_systemd.txt' using 1:4 title 'systemd' with lines lw 3 lt 1
+
+# TEMPO ITERACAO
+
+# # set xlabel 'Iteration'
+# # set ylabel 'Time (minutes)'
+# set xlabel 'Iteração'
+# set ylabel 'Tempo (minutos)'
+
+# # set output 'imagens/26-01 21-00/tempo_it_por.png'
+# set yr [16.7:17.8]
+# # set title 'Iteration time'
+# set title 'Tempo de iteração'
+# plot 'dados_plot_tempo_it.txt' using 1:2 title 'tempo de iteração' with lines lw 3 lt 1
