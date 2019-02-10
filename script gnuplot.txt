@@ -1,45 +1,57 @@
-set term png size 1000,500
-set xlabel 'Tempo (minutos)'
-set ylabel 'Memoria (Bytes)'
+set encoding utf8
+# set term pngcairo size 1000,500
+# set size 1000,500
+set xlabel 'Time (minutes)'
+set ylabel 'Memory (MBytes)'
 
-# # MYSQL
+# MYSQL
 
-set output 'imagens/25-01 08-40/mem virtual mysql.png'
-set title 'Memoria virtual mysql'
-plot 'dados_mysqld.txt' using 1:2 title 'mysql' with lines lw 3 lt 1
+# set output 'imagens/26-01 21-00/mem virtual mysql.png'
+set title 'Mysql virtual memory'
+plot 'dados_plot_mysqld.txt' using 1:2 title 'mysql' with lines lw 3 lt 1
 
-set output 'imagens/25-01 08-40/mem residente mysql.png'
-set title 'Memoria residente mysql'
-plot 'dados_mysqld.txt' using 1:3 title 'mysql' with lines lw 3 lt 1
+# set output 'imagens/26-01 21-00/mem residente mysql.png'
+set title 'Mysql resident memory'
+plot 'dados_plot_mysqld.txt' using 1:3 title 'mysql' with lines lw 3 lt 1
 
-set output 'imagens/25-01 08-40/mem compartilhada mysql.png'
-set title 'Memoria compartilhada mysql'
-plot 'dados_mysqld.txt' using 1:4 title 'mysql' with lines lw 3 lt 1
+# set output 'imagens/26-01 21-00/mem compartilhada mysql.png'
+set title 'Mysql shared memory'
+plot 'dados_plot_mysqld.txt' using 1:4 title 'mysql' with lines lw 3 lt 1
 
-# # ONED
+# ONED
 
-set output 'imagens/25-01 08-40/mem virtual oned.png'
-set title 'Memoria virtual oned'
-plot 'dados_oned.txt' using 1:2 title 'oned' with lines lw 3 lt 1
+# set output 'imagens/26-01 21-00/mem virtual oned.png'
+set title 'Oned Virtual Memory'
+plot 'dados_plot_oned.txt' using 1:2 title 'oned' with lines lw 3 lt 1
 
-set output 'imagens/25-01 08-40/mem residente oned.png'
-set title 'Memoria residente oned'
-plot 'dados_oned.txt' using 1:3 title 'oned' with lines lw 3 lt 1
+# set output 'imagens/26-01 21-00/mem residente oned.png'
+set title 'Oned resident memory'
+plot 'dados_plot_oned.txt' using 1:3 title 'oned' with lines lw 3 lt 1
 
-set output 'imagens/25-01 08-40/mem compartilhada oned.png'
-set title 'Memoria compartilhada oned'
-plot 'dados_oned.txt' using 1:4 title 'oned' with lines lw 3 lt 1
+# set output 'imagens/26-01 21-00/mem compartilhada oned.png'
+set title 'Oned shared memory'
+plot 'dados_plot_oned.txt' using 1:4 title 'oned' with lines lw 3 lt 1
 
 # SYSTEMD
 
-set output 'imagens/25-01 08-40/mem virtual systemd.png'
-set title 'Memoria virtual systemd'
-plot 'dados_systemd.txt' using 1:2 title 'systemd' with lines lw 3 lt 1
+# set output 'imagens/26-01 21-00/mem virtual systemd.png'
+set title 'Systemd Virtual Memory'
+plot 'dados_plot_systemd.txt' using 1:2 title 'systemd' with lines lw 3 lt 1
 
-set output 'imagens/25-01 08-40/mem residente systemd.png'
-set title 'Memoria residente systemd'
-plot 'dados_systemd.txt' using 1:3 title 'systemd' with lines lw 3 lt 1
+# set output 'imagens/26-01 21-00/mem residente systemd.png'
+set title 'Systemd resident memory'
+plot 'dados_plot_systemd.txt' using 1:3 title 'systemd' with lines lw 3 lt 1
 
-set output 'imagens/25-01 08-40/mem compartilhada systemd.png'
-set title 'Memoria compartilhada systemd'
-plot 'dados_systemd.txt' using 1:4 title 'systemd' with lines lw 3 lt 1
+# set output 'imagens/26-01 21-00/mem compartilhada systemd.png'
+set title 'Systemd shared memory'
+plot 'dados_plot_systemd.txt' using 1:4 title 'systemd' with lines lw 3 lt 1
+
+# TEMPO ITERACAO
+
+# # set xlabel 'Iteration'
+# # set ylabel 'Time (minutes)'
+
+# # set output 'imagens/26-01 21-00/tempo_it_por.png'
+# set yr [16.7:17.8]
+# # set title 'Iteration time'
+# plot 'dados_plot_tempo_it.txt' using 1:2 title 'tempo de iteração' with lines lw 3 lt 1
