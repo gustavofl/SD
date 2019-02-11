@@ -12,9 +12,9 @@ fi
 ./filtrar_dados_arquivo.sh mysqld $tempo_inicial
 ./filtrar_dados_arquivo.sh oned $tempo_inicial
 ./filtrar_dados_arquivo.sh systemd $tempo_inicial
-# ./filtrar_dados_arquivo.sh one $tempo_inicial
 
-./gerar_amostragem_dados.sh mysqld # > dados_grafico_mysqld.txt
-./gerar_amostragem_dados.sh oned # > dados_grafico_oned.txt
-./gerar_amostragem_dados.sh systemd # > dados_grafico_systemd.txt
-# ./gerar_amostragem_dados.sh one # > dados_grafico_systemd.txt
+./gerar_amostragem_dados.sh mysqld
+./gerar_amostragem_dados.sh oned
+./gerar_amostragem_dados.sh systemd
+
+./gerar_amostragem_dados_tempo_it.sh
