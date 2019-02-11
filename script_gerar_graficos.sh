@@ -1,5 +1,7 @@
 #!/bin/bash
 
+./filtrar_dados.sh/
+
 ## OBTER O MAIOR TEMPO FINAL DOS ARQUIVOS
 tempo_final=`tail -n1 mysqld.txt`
 if [ `tail -n1 oned.txt` -lt $tempo_final ]; then
@@ -28,4 +30,5 @@ fi
 rm ultimas_imagens
 ln -s "imagens/$nome_pasta" ultimas_imagens
 
+gnuplot "script gnuplot.txt"
 gnuplot "script gnuplot portugues.txt"
