@@ -1,6 +1,6 @@
 #!/bin/bash
 
-./filtrar_dados.sh/
+./filtrar_dados.sh
 
 ## OBTER O MAIOR TEMPO FINAL DOS ARQUIVOS
 tempo_final=`tail -n1 mysqld.txt`
