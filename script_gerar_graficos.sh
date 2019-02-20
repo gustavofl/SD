@@ -4,10 +4,10 @@
 
 ## OBTER O MAIOR TEMPO FINAL DOS ARQUIVOS
 tempo_final=`tail -n1 mysqld.txt`
-if [ `tail -n1 oned.txt` -lt $tempo_final ]; then
+if [ `tail -n1 oned.txt` -gt $tempo_final ]; then
 	tempo_final=`tail -n1 oned.txt`
 fi
-if [ `tail -n1 systemd.txt` -lt $tempo_final ]; then
+if [ `tail -n1 systemd.txt` -gt $tempo_final ]; then
 	tempo_final=`tail -n1 systemd.txt`
 fi
 
