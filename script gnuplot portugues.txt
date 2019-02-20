@@ -1,6 +1,6 @@
 set encoding utf8
 set term pngcairo size 1000,500
-set xlabel 'Tempo (minutos)'
+set xlabel 'Tempo (horas)'
 set ylabel 'Memória (MBytes)'
 
 # MYSQL
