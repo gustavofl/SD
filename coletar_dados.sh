@@ -87,11 +87,11 @@ mes=`echo $data | awk '{print $2}'`
 hora=`echo $data | awk '{print $4}' | awk -F: '{print $1}'`
 minutos=`echo $data | awk '{print $4}' | awk -F: '{print $2}'`
 
-titulo_commit=`echo dados $dia-$mes $hora-$minutos "(teste da automacao de coletas de dados)"`
+titulo_commit=`echo dados $dia-$mes $hora-$minutos`
 
 echo titulo do commit: $titulo_commit
 
 cd ..
 git add dados/*.txt -f
 git commit -m "$titulo_commit"
-git push origin automacao_coleta_dados # dados_frontend
+git push origin dados_frontend
