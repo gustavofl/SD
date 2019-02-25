@@ -3,12 +3,12 @@
 ./filtrar_dados.sh
 
 ## OBTER O MAIOR TEMPO FINAL DOS ARQUIVOS
-tempo_final=`tail -n1 mysqld.txt`
-if [ `tail -n1 oned.txt` -gt $tempo_final ]; then
-	tempo_final=`tail -n1 oned.txt`
+tempo_final=`tail -n1 dados/mysqld.txt`
+if [ `tail -n1 dados/oned.txt` -gt $tempo_final ]; then
+	tempo_final=`tail -n1 dados/oned.txt`
 fi
-if [ `tail -n1 systemd.txt` -gt $tempo_final ]; then
-	tempo_final=`tail -n1 systemd.txt`
+if [ `tail -n1 dados/systemd.txt` -gt $tempo_final ]; then
+	tempo_final=`tail -n1 dados/systemd.txt`
 fi
 
 data=`date -d@$tempo_final`
@@ -32,3 +32,5 @@ ln -s "imagens/$nome_pasta" ultimas_imagens
 
 gnuplot "script gnuplot.txt"
 gnuplot "script gnuplot portugues.txt"
+
+rm dados_*

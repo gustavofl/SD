@@ -8,4 +8,4 @@ do
 	tempo=`echo "scale=1; $line/60" | bc`
 	echo $count $tempo >> dados_plot_tempo_it.txt
 	count=$(($count+1))
-done < tempo_it.txt
+done < dados/tempo_it.txt
